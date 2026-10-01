@@ -1,0 +1,191 @@
+/* ---------- Reset and base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #2d2d2d;
+  background-color: #f4f1ea;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #2f4858;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px 24px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0 0 20px;
+  color: #d9e4ea;
+}
+
+/* ---------- Navigation (Flexbox) ---------- */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #f6c945;
+  color: #2f4858;
+}
+
+/* ---------- Main and section cards ---------- */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+main > h2 {
+  color: #2f4858;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+section h2,
+section h3 {
+  margin-top: 0;
+  color: #2f4858;
+}
+
+/* ---------- Features list (CSS Grid) ---------- */
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.features li {
+  background-color: #fdf6dc;
+  border-left: 5px solid #f6c945;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* ---------- Shortcuts table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #c9d3d8;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background-color: #2f4858;
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f7f8;
+}
+
+/* ---------- Forms ---------- */
+form p {
+  margin: 0 0 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  border: 1px solid #b8c4ca;
+  border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #f6c945;
+  border-color: #2f4858;
+}
+
+/* The Home page form is not wrapped in <p>, so space it out */
+#note-form input {
+  margin-bottom: 14px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  background-color: #2f4858;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #f6c945;
+  color: #2f4858;
+  transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #5a6a73;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  header {
+    padding: 20px 12px 14px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 16px;
+  }
+}
